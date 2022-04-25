@@ -1,0 +1,9 @@
+.carta {
+    transition: all .3s;
+}
+
+.carta:hover {
+    cursor: pointer;
+    background: lighten(#000, 90);
+}
+
