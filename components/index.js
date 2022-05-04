@@ -8,3 +8,6 @@ export { default as CommentsForm } from './CommentsForm';
 export { default as Comments } from './Comments';
 export { default as PostDetail } from './PostDetail';
 export { default as Search } from './Search';
+export { default as Footer } from './Footer';
+export { default as Responsive } from './Responsive';
+export { default as Modal } from './Modal';

@@ -12,10 +12,10 @@ const PostCard = ({post}) => {
                     <img 
                         src={post.featuredImage.url} 
                         alt={post.title}
-                        className='w-full object-cover h-full object-center shadow-lg rounded-t-lg lg:rounded-lg' 
+                        className='w-full object-cover h-full object-center shadow-lg rounded-t-lg xl:rounded-lg' 
                     />
                 </div>
-                <h1 className='carta__titulo text-center mb-8 whitespace-nowrap overflow-hidden text-xl font-semibold'>
+                <h1 className='flex items-center justify-center text-center mb-8 text-xl font-semibold h-14'>
                         {post.title}
                 </h1>
                 <div className='block text-center items-center justify-center w-full'>
@@ -29,7 +29,7 @@ const PostCard = ({post}) => {
                             />
                         <p className='inline align-middle text-black ml-2 text-sm'> {post.author.name} </p>
                     </div>
-                    <div className='text-sm text-black'>
+                    <div className='text-sm text-black mb-2'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>

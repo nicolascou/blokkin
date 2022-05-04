@@ -1,7 +1,7 @@
 import { types } from '../types/types';
 
 const initialState = {
-    search: '',
+    search: "",
     cardSearched: []
 };
 
@@ -18,6 +18,12 @@ export const searchReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cardSearched: action.payload
+            }
+
+        case types.resetState:
+            return {
+                search: "",
+                cardSearched: []
             }
     
         default:

@@ -1,4 +1,3 @@
-// import { PostCard } from "../components";
 import { getPosts } from "../services/index";
 import { types } from "../types/types"
 
@@ -13,7 +12,8 @@ export const getPostsByName = ( name ) => {
         const posts = (await getPosts()) || [];
         
         name = name.toLowerCase();
-        let validPosts = posts.filter(post => post.node.title.toLowerCase().includes(name));
+        let validPosts = posts.filter(post => post.node.excerpt.toLowerCase().includes(name));
+        if( name === '') { validPosts = [] }
         
         dispatch( cardSearched(validPosts) )
     }
@@ -22,6 +22,10 @@ export const getPostsByName = ( name ) => {
 const cardSearched = (cards) => ({
     type: types.cardSearched,
     payload: cards
+})
+
+export const resetState = () => ({
+    type: types.resetState
 })
 
 

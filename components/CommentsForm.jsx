@@ -4,7 +4,6 @@ import { submitComment } from '../services';
 const CommentsForm = ({ slug }) => {
 
     const [error, setError] = useState(false);
-    const [localStorage, setLocalStorage] = useState(null);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const commentEl = useRef();
     const nameEl = useRef();
@@ -50,26 +49,26 @@ const CommentsForm = ({ slug }) => {
     }
     
     return (
-        <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-            <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Replys</h3>
+        <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 border-4 border-black'>
+            <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Escribe un comentario</h3>
             <div className='grid grid-cols-1 gap-4 mb-4'>
                 <textarea 
                     ref={commentEl} 
-                    className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
-                    placeholder='Comment'
+                    className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-black bg-gray-100 text-black"
+                    placeholder='Comentario'
                     name='comment'
                 />
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4'>
                 <input 
                     type="text" ref={nameEl}
-                    className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
-                    placeholder='Name'
+                    className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-black bg-gray-100 text-black"
+                    placeholder='Nombre'
                     name='name'
                 />
                 <input 
                     type="text" ref={emailEl}
-                    className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+                    className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-black bg-gray-100 text-black"
                     placeholder='Email'
                     name='email'
                 />
@@ -77,19 +76,19 @@ const CommentsForm = ({ slug }) => {
             <div className='grid grid-cols-1 gap-4 mb-4'>
                 <div>
                     <input type="checkbox" id='storeData' name='storeData' value="true" ref={storeDataEl} />
-                    <label className='text-gray-500 cursor-pointer ml-2' htmlFor='storeData'>Remind me</label>
+                    <label className='text-gray-500 cursor-pointer ml-2' htmlFor='storeData'>Recordar mi e-mail y nombre</label>
                 </div>
             </div>
-            {error && <p className='text-xs text-red-500'>All fields are required</p>}
+            {error && <p className='text-xs text-red-500'>Todos los campos son requeridos</p>}
             <div className='mt-8'>
                 <button 
                     type='button' 
                     onClick={handleCommentSubmission}
-                    className="transition duration-300 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer"
+                    className="transition duration-300 ease hover:bg-white hover:ring-2 hover:ring-black hover:text-black inline-block bg-black text-lg rounded-full text-white px-8 py-3 cursor-pointer"
                 >
-                    Post Comment
+                    Publicar comentario
                 </button>
-                {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Comment submitted for review</span>}
+                {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Comentario enviado a revisión</span>}
             </div>
         </div>
     )
