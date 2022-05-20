@@ -6,7 +6,7 @@ import Responsive from './Responsive';
 
 const Layout = ({children}) => {
     return (
-        <div className='p-8 relative'>
+        <div className='p-1 sm:p-4 md:p-8 relative'>
           <Header />
           <Responsive /> 
           <Modal />

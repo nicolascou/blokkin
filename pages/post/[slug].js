@@ -30,7 +30,7 @@ const PostDetails = ({post}) => {
                         <CommentsForm slug={post.slug} />
                         <Comments slug={post.slug} />
                     </div>
-                    <div className='col-span-1 xl:col-span-4'>
+                    <div className='hidden xl:block xl:col-span-4'>
                         <div className='relative xl:sticky top-8'>
                             <PostWidget slug={post.slug} categories={post.categories.map((category) => (category.slug))} />
                             <Categories />

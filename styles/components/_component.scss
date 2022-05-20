@@ -36,6 +36,10 @@ transform: scaleX(1);
 }
 
 // CONTENIDO DEL POST
+.contenido {
+    overflow-wrap: break-word;
+}
+
 .contenido p {
     margin-bottom: 1.8rem;
 }
