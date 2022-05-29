@@ -8,11 +8,11 @@ const PostCard = ({post}) => {
     return (
         <Link href={`/post/${post.slug}`}>
             <div className='bg-white shadow-lg rounded-lg p-8 border-4 border-black carta'>
-                <div className='shadow-md h-52 mb-6'>
+                <div className='shadow-md h-52 mb-6 rounded-lg'>
                     <img 
                         src={post.featuredImage.url} 
                         alt={post.title}
-                        className='w-full object-cover h-full object-center shadow-lg rounded-t-lg xl:rounded-lg' 
+                        className='object-center h-full w-full object-cover shadow-lg rounded-lg' 
                     />
                 </div>
                 <h1 className='flex items-center justify-center text-center mb-8 text-xl font-semibold h-14'>

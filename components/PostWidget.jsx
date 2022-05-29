@@ -7,10 +7,17 @@ import { getRecentPosts, getSimilarPosts } from '../services';
 const PostWidget = ({categories, slug}) => {
     
     const [relatedPosts, setRelatedPosts] = useState([]);
+    const [isRelated, setIsRelated] = useState(true)
 
     useEffect(() => {
         if(slug){
+            setIsRelated(true);
             getSimilarPosts(categories, slug)
+                .then((result) => setRelatedPosts(result))
+        } 
+        if (relatedPosts.length === 0) {
+            setIsRelated(false);
+            getRecentPosts()
                 .then((result) => setRelatedPosts(result))
         }
     }, [slug])
@@ -18,7 +25,7 @@ const PostWidget = ({categories, slug}) => {
     return (
         <div className='bg-white shadow-lg rounded-lg p-8 mb-8 border-4 border-black'>
             <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
-                Posts relacionados
+                { isRelated ? 'Posts relacionados' : 'Posts recientes' }
             </h3>
             {relatedPosts.map((post) => (
                 <div key={post.title} className='flex items-center w-full mb-8 last:mb-4'>

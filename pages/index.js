@@ -11,7 +11,7 @@ export default function Home({ posts }) {
         <>
             <Head>
                 <title>BLOKKIN' - Blog en español acerca de los aspectos técnicos de la tecnología blockchain</title>
-                <meta name='description' content='Blog en español acerca de los aspectos técnicos de la tecnología blockchain, las criptomonedas, los smart contracts, etc.' />
+                <meta name='description' content='Blog en español sobre programación. Explicaciones sobre conceptos teóricos de la programación y nuevas tecnologías' />
 
                 <link rel="icon" href="/img/favicon.ico" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossOrigin="anonymous" referrerPolicy="no-referrer" />

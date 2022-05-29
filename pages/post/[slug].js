@@ -20,7 +20,8 @@ const PostDetails = ({post}) => {
     return (
         <>
             <Head>
-                <title> { post.slug.charAt(0).toUpperCase() + post.slug.slice(1) } - Post de BLOKKIN' </title>
+                <title>{post.title} - Post de BLOKKIN'</title>
+                <link rel="icon" href="/img/favicon.ico" />
             </Head>
             <div className='container mx-auto px-10 mb-8'>
                 <div className='grid grid-cols-1 xl:grid-cols-12 gap-12'>
