@@ -12,7 +12,11 @@ const Responsive = () => {
     }
     
     return (
-        <div className='cursor-pointer h-20 w-20 fixed zztop xl:hidden top-8 right-8 p-5 rounded-full shadow-lg border-4 border-black bg-white responsiveButton transition duration-800' onClick={ handleClick }>
+        <div className='cursor-pointer h-20 w-20 fixed zztop 2xl:hidden 
+                        top-8 right-8 p-5 rounded-full shadow-lg border-4 border-black bg-white 
+                        responsiveButton transition duration-800' 
+            onClick={ handleClick }
+        >
             <div className={menuOn ? 'toggleResponsive' : undefined}>
                 <span></span>
             </div>
