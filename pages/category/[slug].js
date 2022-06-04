@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getCategories, getPostsByCategory } from '../../services/index';
 import { Categories, PostCard, Search } from '../../components';
 import Head from 'next/head';
@@ -9,7 +9,7 @@ import { menuOff } from '../../actions/menu';
 
 const PostsByCategory = ({ posts }) => {
 
-    const category = posts[0].categories[0].name;
+    const category = posts[0]?.categories[0].name;
     
     const dispatch = useDispatch();
     const { search, cardSearched } = useSelector(state => state.search);
@@ -23,7 +23,7 @@ const PostsByCategory = ({ posts }) => {
     return (
         <>
             <Head>
-                <title>Categoría { category } - Buscando por categoría BLOKKIN'</title>
+                <title>Categoría { category && category } - Buscando por categoría BLOKKIN'</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
                 <link rel="icon" href="/img/favicon.ico" />
             </Head>
@@ -31,6 +31,12 @@ const PostsByCategory = ({ posts }) => {
                 <div className='2xl:hidden'>
                     <Search />
                 </div>
+                {
+                    (category === undefined) && 
+                    <div className='centrar fixed'>
+                        <p className='text-2xl'>Por el momento, no hay contenido en esta categoría</p>
+                    </div>
+                }
                 <div className='grid grid-cols-1 xl:grid-cols-12 xl:gap-10'>
                     {
                         (search !== '') ?
