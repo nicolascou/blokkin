@@ -20,12 +20,12 @@ const Modal = () => {
             <Head>
                 <link
                     rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-                />
+                    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
             </Head>
-            <div className={menuOn ? 'w-screen h-screen centrar fixed bg-white z-50 opacity-80' : 'hidden'}></div>
-            <div className={menuOn ? 'zztop fixed centrar-media w-2/3 h-10 sm:h-2/3' : 'hidden'}>
-                <div className='rounded-2xl border-black border-4 shadow-lg bg-white p-8 animate__animated animate__fadeInLeft'>
+            <div className={menuOn ? 'w-screen h-screen centrar fixed bg-white z-50 opacity-80 xl:hidden' : 'hidden'}></div>
+            <div className={menuOn ? 'zztop fixed centrar-media w-2/3 h-2/4 xl:hidden' : 'hidden'}>
+                <div className='rounded-2xl border-black border-4 shadow-lg bg-white p-4 md:p-8 
+                                animate__animated animate__fadeInLeft'>
                     <h2 className='border-b-2 border-black font-semibold mb-8 p-4 text-xl'>Categorías</h2>
                     <ul>
                         {categories.map((category) => (

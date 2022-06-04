@@ -10,7 +10,6 @@ const SitckySideBar = ({ post }) => {
 
     const handleScroll = () => {
         position = window.pageYOffset;
-        console.log(position)
         if (prepos > position) {
             setScrollDown(false);
         } else {

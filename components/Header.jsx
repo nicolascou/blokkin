@@ -6,8 +6,8 @@ import logo from '../public/img/logo.png'
 const Header = () => {
     
     return (
-        <div className='container w-2/3 m-auto px-10 mb-8 text-center bg-white rounded-2xl border-4 border-black shadow-2xl'>
-            <div className='w-full md:w-2/3 lg:w-2/4 inline-block py-8 px-2'>
+        <div className='container w-2/3 m-auto px-4 md:px-10 mb-8 text-center bg-white rounded-2xl border-4 border-black shadow-2xl'>
+            <div className='w-full md:w-2/3 lg:w-2/4 inline-block py-8 px-0 md:px-2'>
                 <Link href="/">
 
                     <div className='border-b-4 p-2 border-black w-full'>

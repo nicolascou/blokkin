@@ -23,7 +23,7 @@ const PostDetails = ({post}) => {
                 <title>{post.title} - Post de BLOKKIN'</title>
                 <link rel="icon" href="/img/favicon.ico" />
             </Head>
-            <div className='container mx-auto px-10 mb-8'>
+            <div className='container mx-auto px-2 md:px-10 mb-8'>
                 <div className='grid grid-cols-1 xl:grid-cols-12 gap-12'>
                     <div className='col-span-1 xl:col-span-8'>
                         <PostDetail post={post} />

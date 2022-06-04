@@ -15,7 +15,7 @@ export default function Home({ posts }) {
 
                 <link rel="icon" href="/img/favicon.ico" />
             </Head>
-            <div className="container mx-auto px-10 mb-8 relative">
+            <div className="container mx-auto px-2 sm:px-10 mb-8 relative">
                 <div className='xl:hidden'>
                     <Search />
                 </div>
@@ -32,7 +32,7 @@ export default function Home({ posts }) {
                             {posts.map( (post) => <PostCard post={post.node} key={post.node.title} />)}
                         </div>
                     }
-                    <div className='xl:col-span-3 xl:block'>
+                    <div className='hidden xl:col-span-3 xl:block'>
                         <div className='relative xl:sticky top-8'>
                             <Search />
                             <Categories />
