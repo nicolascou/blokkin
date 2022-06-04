@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { getPosts, getPostDetails } from '../../services/index';
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../components';
+import { PostDetail, Author, Comments, CommentsForm, StickySideBar } from '../../components';
 import Head from 'next/head';
 import { useDispatch } from 'react-redux';
 import { resetState } from '../../actions/search';
@@ -32,10 +32,7 @@ const PostDetails = ({post}) => {
                         <Comments slug={post.slug} />
                     </div>
                     <div className='hidden xl:block xl:col-span-4'>
-                        <div className='relative xl:sticky top-8'>
-                            <PostWidget slug={post.slug} categories={post.categories.map((category) => (category.slug))} />
-                            <Categories />
-                        </div>
+                        <StickySideBar post={post} />
                     </div>
                 </div>
             </div>

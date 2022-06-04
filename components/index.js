@@ -11,3 +11,4 @@ export { default as Search } from './Search';
 export { default as Footer } from './Footer';
 export { default as Responsive } from './Responsive';
 export { default as Modal } from './Modal';
+export { default as StickySideBar } from './SitckySideBar';
