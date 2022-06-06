@@ -10,7 +10,7 @@ export default function Home({ posts }) {
     return (
         <>
             <Head>
-                <title>BLOKKIN' - Blog en español acerca de los aspectos técnicos de la tecnología blockchain</title>
+                <title>BLOKKIN' - Blog en español sobre la pragramación, aspectos teóricos de estructuras de datos, algoritmos, desarrollo web y análisis de nuevas tecnologías</title>
                 <meta name='description' content='Blog en español sobre programación. Explicaciones sobre conceptos teóricos de la programación y nuevas tecnologías' />
 
                 <link rel="icon" href="/img/favicon.ico" />
